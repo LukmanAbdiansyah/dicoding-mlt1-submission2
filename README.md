@@ -3,9 +3,9 @@
 
 Dalam era digital yang semakin maju, sistem rekomendasi telah menjadi elemen yang tidak terpisahkan dari berbagai aplikasi dan platform online. Dengan meningkatnya volume konten yang tersedia, pengguna sering kali menghadapi kesulitan dalam menemukan informasi yang relevan dan bermanfaat. Sistem rekomendasi hadir sebagai solusi untuk mengatasi masalah ini dengan memberikan rekomendasi yang dipersonalisasi berdasarkan minat, preferensi, dan perilaku pengguna. Dengan bantuan algoritma cerdas dan teknik analisis data, sistem rekomendasi dapat mempercepat dan mempermudah proses penemuan konten, memperluas pengetahuan pengguna, dan meningkatkan pengalaman pengguna secara keseluruhan.
 
-Dalam industri buku, terdapat jumlah yang melimpah dari judul-judul yang tersedia di pasar. Bagi penggemar buku, ini dapat menjadi tantangan untuk menemukan bacaan baru yang sesuai dengan minat mereka di tengah keragaman yang ada. Dalam konteks ini, sistem rekomendasi online bookstore menjadi alat yang berharga untuk membantu pengguna menemukan buku-buku yang relevan, memperluas pengetahuan mereka, dan meningkatkan pengalaman membaca secara keseluruhan[2],[3].
+Dalam industri buku, terdapat jumlah yang melimpah dari judul-judul yang tersedia di pasar. Bagi penggemar buku, ini dapat menjadi tantangan untuk menemukan bacaan baru yang sesuai dengan minat mereka di tengah keragaman yang ada. Dalam konteks ini, sistem rekomendasi *online bookstore* menjadi alat yang berharga untuk membantu pengguna menemukan buku-buku yang relevan, memperluas pengetahuan mereka, dan meningkatkan pengalaman membaca secara keseluruhan[1],[2].
 
-Sistem rekomendasi merupakan teknologi yang sangat membantu pengguna dalam menemukan barang yang ingin mereka beli. Penggunaan sistem rekomendasi secara luas digunakan untuk merekomendasikan produk-produk yang paling sesuai kepada pengguna akhir. Saat ini, situs web penjualan buku online saling bersaing dengan mempertimbangkan berbagai atribut. Sistem rekomendasi merupakan salah satu alat terkuat untuk meningkatkan keuntungan dan mempertahankan pembeli. Namun, sistem-sistem yang sudah ada sering kali mengakibatkan ekstraksi informasi yang tidak relevan dan mengakibatkan kurangnya kepuasan pengguna. Dalam proyek ini, disajikan sebuah *Book Recommendation System* (BRS) yang didasarkan pada fitur kombinasi dari *Content Based Filtering* (CBF) dan*Collaborative Filtering* (CF) untuk menghasilkan rekomendasi yang efisien dan efektif[4]. 
+Sistem rekomendasi merupakan teknologi yang sangat membantu pengguna dalam menemukan barang yang ingin mereka beli. Penggunaan sistem rekomendasi secara luas digunakan untuk merekomendasikan produk-produk yang paling sesuai kepada pengguna akhir. Saat ini, situs web penjualan buku *online* saling bersaing dengan mempertimbangkan berbagai atribut. Sistem rekomendasi merupakan salah satu alat terkuat untuk meningkatkan keuntungan dan mempertahankan pembeli. Namun, sistem-sistem yang sudah ada sering kali mengakibatkan ekstraksi informasi yang tidak relevan dan mengakibatkan kurangnya kepuasan pengguna. Dalam proyek ini, disajikan sebuah *Book Recommendation System* (BRS) yang didasarkan pada fitur kombinasi dari *Content Based Filtering* (CBF) dan*Collaborative Filtering* (CF) untuk menghasilkan rekomendasi yang efisien dan efektif[3]. 
 
 # Business Understanding
 ## Problem Statement
@@ -17,21 +17,20 @@ Berdasarkan latar belakang sebelumnya maka ada beberapa yang dapat di pertanyaka
 ## Goals
 Berdasarkan problem statement yang dijabarkan sebelumnya maka tujuan dari proyek ini adalah :
 
-* Mampu menampilkan dan menjelaskan hasil dari sistem rekomendasi dari metode *Collaborative Filtering* (CF) dan *Content-Based Filtering* (CBF) 
-* Implementasi metode *Content Based Filtering dan Collaborative Filtering* sehingga dapat memberikan rekomendasi buku terhadap pengguna
+* Mampu menampilkan, menjelaskan, dan mengimplementasikan hasil dari sistem rekomendasi dari metode Collaborative Filtering* (CF) dan *Content-Based Filtering* (CBF) 
 * Mebandingkan keunggulan dan kekurangan dari metode *Collaborative Filtering* (CF) dan *Content-Based Filtering* (CBF) dalam sistem rekomendasi
 * Analisis hasil dari metode *Collaborative Filtering* (CF) dan *Content-Based Filtering* (CBF)
 
 ## Solution Statement
 Berdasarkan goal yang dimiliki maka ada beberapa solusi yang dapat diberikan yaitu:
-* Menerapkan metode Content Based Filtering menggunakan Cosine Similarity Measurement
-* Menerapkan Collaborative filtering yang di kombinasikan dengan deep learning
+* Menerapkan metode *Content Based Filtering* menggunakan *Cosine Similarity Measurement*
+* Menerapkan *Collaborative filtering* yang di kombinasikan dengan *deep learning*
 * Membandingkan kinerja pada metode CBF and CF
 * Pada CBF akan menghitung *Precision* pada sistem
 * Sedangkan untuk metode CF akan dievaluasi menggunakan *Root Mean Squared Error* (RMSE)
 
 # Data Understanding
-Dataset yang digunakan pada proyek ini diambil dari website kaggle [Book-Crossing: User review ratings](https://www.kaggle.com/datasets/ruchi798/bookcrossing-dataset) . Pada proyek ini kita akan menggunakan 2 dataset yaitu *Book Data with Categories.csv* dan *BX-Book-Ratings.csv*.
+Dataset yang digunakan pada proyek ini diambil dari website kaggle [Book-Crossing: User review ratings](https://www.kaggle.com/datasets/ruchi798/bookcrossing-dataset) . Pada proyek ini digunakan 2 dataset yaitu *Book Data with Categories.csv* dan *BX-Book-Ratings.csv*.
 ## Data Variabel
 
 Tabel 1 : Dataset Books
@@ -121,8 +120,8 @@ Pada Books dataset terdapat 18 kolom yang dapat dilihat pada tabel 4.
 ## Langkah-Langkah Data Understanding
 * Melakukan load dataset untuk seluruh menggunakan Pandas
 * Mengecek Tipe data pada setiap dataset dengan fungsi .info()
-* Melakukan .dropna() pada dataset untung handling missing value
-* Mengecek nilai unique pada dataset terhadap kolom kategori
+* Melakukan .dropna() pada dataset untung *handling missing value*
+* Mengecek nilai *unique* pada dataset terhadap kolom kategori
 * Mengambil dataset sample karena keterbatasan resource perangkat google colab
 
 ### Hasil EDA
@@ -150,7 +149,7 @@ Tabel 5 : Table Info Dataset Books
 | state               | 1008377 non-null   | object    |
 | country             | 995801 non-null    | object    |
 
-Keseluruhan tipe data pada dataset books adalah object kecuali pada kolom rating, user_id, age, dan year_of_publication. terlihat juga terdapat missing value pada kolom city, state, dan country. sementara itu untuk kolom kategori terdapat 6008 nilai unik, ketika dilakukan visualisasi ternyata terdapat category yang nilainya hanya sedikit sekali dan terdapat category yang namanya sama akan tetapi terdapat perbedaan pada hurufnya.
+Keseluruhan tipe data pada dataset books adalah object kecuali pada kolom rating, user_id, age, dan year_of_publication. terlihat juga terdapat missing value pada kolom *city, state,* dan *country*. sementara itu untuk kolom kategori terdapat 6008 nilai unik, ketika dilakukan visualisasi ternyata terdapat *category* yang nilainya hanya sedikit sekali dan terdapat *category* yang namanya sama akan tetapi terdapat perbedaan pada hurufnya.
 
 Tabel 6 : Info dataset Ratings
 
@@ -161,7 +160,7 @@ Tabel 6 : Info dataset Ratings
 | Book-Rating  | 1149780        | int64   |
 
 
-Pada tabel dataset Rating memiliki dua kolom numerik integer dan satu tipe data object dan juga tidak ada indikasi nilai null.
+Pada tabel dataset Rating memiliki dua kolom numerik *integer* dan satu tipe data *object* dan juga tidak ada indikasi nilai *null*.
 
 Tabel 7 : Statistik Rating
 
@@ -176,7 +175,7 @@ Tabel 7 : Statistik Rating
 |  75%  |      7.000000 |
 |  max  |     10.000000 |
 
-Pada kolom book rating memiliki jumlah 340.556 setelah di clean yang memiliki rata-rata rating 3.01, dengan nilai minimal 1 dan maximal rating 10.
+Pada kolom *book rating* memiliki jumlah 340.556 setelah di clean yang memiliki rata-rata *rating* 3.01, dengan nilai minimal 1 dan maximal *rating* 10.
 
 # Data Preparation
 
@@ -187,7 +186,7 @@ Pada kolom book rating memiliki jumlah 340.556 setelah di clean yang memiliki ra
 * mengambil kolom memberikan informasi penting pada buku, seperti _book_title, book_author, publisher_ dan _category_, sehingga kita dapat menghapus semua kolom kecuali kolom-kolom tersebut.
 * Membersihkan data dari duplikasi menggunakan fungsi drop_duplicates().
 * Membersihkan data dari nilai null dengan menggunakan fungsi dropna().
-* Merging dataset books dan rating pada nilai isbn dengan left join.
+* Merging dataset books dan rating pada nilai isbn dengan *left join*.
 
 Tabel 8 : Hasil Merging
 |    isbn    |                     book_title                    |      book_author     |        publisher        |      Category      | User-ID | Book-Rating |   |
@@ -198,7 +197,7 @@ Tabel 8 : Hasil Merging
 | 0374157065 | Flu: The Story of the Great Influenza Pandemic... |     Gina Bari Kolata |    Farrar Straus Giroux |        ['Medical'] |       8 |           0 |   |
 | 0393045218 |                            The Mummies of Urumchi |      E. J. W. Barber |  W. W. Norton & Company |         ['Design'] |       8 |           0 |   |
 
-* membersihkan fitur category dari simbol, menghapus category yang memiliki jumlah data kurang dari 200 dan yang lebih dari 800 untuk mengurangi jumlah data sehingga mempercepat komputasi, kemudian menambahkan kolom baru dengan nama clean_category.
+* membersihkan fitur *category* dari simbol, menghapus *category* yang memiliki jumlah data kurang dari 200 dan yang lebih dari 800 untuk mengurangi jumlah data sehingga mempercepat komputasi, kemudian menambahkan kolom baru dengan nama clean_category.
 
 Tabel 9 : Hasil Cleaning Kolom Category
 |     |                     book_title                    |     book_author    |          publisher          | Book-Rating |         clean_category        |
@@ -213,32 +212,32 @@ Tabel 9 : Hasil Cleaning Kolom Category
 ### Alasan Penggunaan
 * Mengambil dataset books dan rating karena CBF memberikan rekomendasi berdasarkan kemiripan konten yang terkandung
 * Membersihkan data dari nilai null dan duplicates untuk menghindari bias dan kesalahan analisa pada model
-* Melakukan merging untung mengambil kolom rating.
-* Melakukan cleaning category karena terdapat category yang muncul berulang-ulang dan memiliki simbol.
+* Melakukan *merging* untung mengambil kolom *rating*.
+* Melakukan *cleaning category* karena terdapat *category* yang muncul berulang-ulang dan memiliki simbol.
 
 ## Collaborative FIltering
 ### Data Processing
-* Menggunakan Dataset Rating untuk modelling
-* Melakukan Encode User-ID dan ISBN menggunakan fungsi enumerate pada python
+* Menggunakan *Dataset Rating* untuk *modelling*
+* Melakukan *Encode User-ID* dan ISBN menggunakan fungsi enumerate pada python
 * Mapping Hasil encode ke dataframe menggunakan fungsi map()
 * Mengacak dataset
-* Membagikan dataset menjadi data training dan data testing menggunakan fungsi train_test_split pada library sklearn dengan perbandingan 80:20
+* Membagikan dataset menjadi data training dan data testing menggunakan fungsi train_test_split pada *library* sklearn dengan perbandingan 80:20
 
 ### Alasan Penggunaan
 * Menggunakan dataset Rating dikarenakan model akan memberikan rekomendasi berdasarkan rating yang diberikan user
 * Proses encoding dilakukan agar model nantinya mudah dipahami dan di proses oleh algoritma. serta untuk mengubah data kategorikal menjadi data numerikal
-* Membagi dataset bertujuan agar model dapat di evaluasi setelah melakukan training
+* Membagi dataset bertujuan agar model dapat di evaluasi setelah melakukan *training*
 
 
 # Modeling
 ## Modeling Content Based Filtering
 ### Proses yang Dilakukan
-* Melakukan perhitungan tf-idf dengan Tfidfvectorizer pada library sklearn
+* Melakukan perhitungan tf-idf dengan Tfidfvectorizer pada *library* sklearn
 * Perhitungan dilakukan dengan fungsi .fit() agar perhitungan dapat dilakukan
 * Kemudian mentransformasikan hasil perhitungan kedalam bentuk skor pada data dengan fungsi fit_transform()
 * Fitur yang ditransformasikan adalah isbn
-* Setelah itu maka dilakukan consine_similarity measurement pada library sklearn
-* Hasil dari perhitungan di masukkan kedalam dataframe 
+* Setelah itu maka dilakukan *consine similarity measurement* menggunakan *library* sklearn
+* Hasil dari perhitungan di masukkan kedalam *dataframe* 
 * Membuat fungsi rekomendasi buku untuk melakukan perhitungan dan menampilkan rekomendasi buku berdasarkan judul buku
 * Input paramater pada fungsi adalah judul_buku, similiarity_data,index,k dimana judul_buku yang merupakan input judul buku yang akan diperhitungkan, similiarity data merupakan dataframe hasil perhitungan consine_similiarity, index yang merupakan list judul buku dan nama pengarang buku dan k merupakan kelipatan yang akan ditampilkan sebanyak k.
 * Untuk proses pada fungsi tersebut, judul_sebagai input akan masuk kedalam pencarian pada df hasil cosine_similiarity dengan menggunakan argpartition dan juga merubah dataframe menjadi numpy dengan rentang -1,-k,-1
@@ -274,15 +273,15 @@ Pada tabel 11 dapat dilihat bahwa sistem rekomendasi berhasil melakukan prediksi
 ## Modeling Collaborative FIltering
 ### Proses yang dilakukan
 * Melakukan proses embedding terhadap data **user** dan **book**. Selanjutnya, lakukan operasi perkalian dot product antara embedding user dan book. Selain itu, kita juga dapat menambahkan bias untuk setiap user dan resto. Skor kecocokan ditetapkan dalam skala [0,1] dengan fungsi aktivasi sigmoid.
-* Model ini menggunakan Binary Crossentropy untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer dengan learning rate sebesar 0.001, dan root mean squared error (RMSE) sebagai metrics evaluation.
-* Kemudian Inisialisasi nilai awal untuk embedding. Dalam kasus ini, 'he_normal' digunakan, yang merupakan metode inisialisasi yang biasa digunakan dalam deep learning dan juga Regularisasi yang diterapkan pada embedding. Dalam kasus ini, regularisasi L2 dengan parameter 1e-6 untuk membantu mengurangi kompleksitas model dan menghindari overfitting.
-* Kemudian model masuk ke tahapan training dengan fungsi .fit() menggunakan epoch 50 dan batch_size 160
+* Model ini menggunakan Binary Crossentropy untuk menghitung loss function, Adam (*Adaptive Moment Estimation*) sebagai optimizer dengan *learning rate* sebesar 0.001, dan *root mean squared error* (RMSE) sebagai metrics evaluation.
+* Kemudian Inisialisasi nilai awal untuk embedding. Dalam kasus ini, 'he_normal' digunakan, yang merupakan metode inisialisasi yang biasa digunakan dalam *deep learning* dan juga Regularisasi yang diterapkan pada *embedding*. Dalam kasus ini, regularisasi L2 dengan parameter 1e-6 untuk membantu mengurangi kompleksitas model dan menghindari *overfitting*.
+* Kemudian model masuk ke tahapan *training* dengan fungsi .fit() menggunakan epoch 50 dan batch_size 160
 
 ### Hasil Testing System Rekomendasi Menggunakan CF
 
 Untuk data input adalah user-id 98391 dimana rating tertinggi yang diberikan adalah pada judul dibawah ini 
 
-Tabel 12 : Top 10 High Rating User book
+Tabel 12 : Top 10 High Rating *User book*
 
 |                     **Top 10 book recommendation**                     |
 |:----------------------------------------------------------------------:|
@@ -298,7 +297,7 @@ Tabel 12 : Top 10 High Rating User book
 |            Roger Ebert's Movie Yearbook 2003 By Roger Ebert            |
 
 
-Tabel diatas merupakan buku dengan rating terbaik yang diberikan oleh user 98391 yang dapat dilihat pada tabel diatas. 
+Tabel diatas merupakan buku dengan rating terbaik yang diberikan oleh *user* 98391 yang dapat dilihat pada tabel diatas. 
 
 ## Perbandingan Kelebihan dan Kekurangan pada metode CBF dan CF
 |                                        |                                        **Content-Based Filtering**                                       |                                                             **Collaborative Filtering**                                                            |
@@ -372,8 +371,7 @@ Dalam proyek ini terdapat beberapa kekurangan yaitu :
 
 # Referensi
 
-* [1] A. Arash, "Book Recommendation Dataset," Kaggle, 2021. [Online]. Available: https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset. [Accessed: Month Day, Year].
-* [2] Kurmashov, N., Latuta, K., & Nussipbekov, A. (2015). Online book recommendation system. _2015 Twelve International Conference on Electronics Computer and Computation (ICECCO)_. https://doi.org/10.1109/icecco.2015.7416895
-* [3] Devika, P., Jyothisree, K., Rahul, P., Arjun, S., & Narayanan, J. (2021). Book recommendation system. _2021 12th International Conference on Computing Communication and Networking Technologies (ICCCNT)_. https://doi.org/10.1109/icccnt51525.2021.9579647
-* [4] P. Mathew, B. Kuriakose and V. Hegde, "Book Recommendation System through content based and collaborative filtering method," 2016 International Conference on Data Mining and Advanced Computing (SAPIENCE), Ernakulam, India, 2016, pp. 47-52.
+* [1] Kurmashov, N., Latuta, K., & Nussipbekov, A. (2015). Online book recommendation system. _2015 Twelve International Conference on Electronics Computer and Computation (ICECCO)_. https://doi.org/10.1109/icecco.2015.7416895
+* [2] Devika, P., Jyothisree, K., Rahul, P., Arjun, S., & Narayanan, J. (2021). Book recommendation system. _2021 12th International Conference on Computing Communication and Networking Technologies (ICCCNT)_. https://doi.org/10.1109/icccnt51525.2021.9579647
+* [3] P. Mathew, B. Kuriakose and V. Hegde, "Book Recommendation System through content based and collaborative filtering method," 2016 International Conference on Data Mining and Advanced Computing (SAPIENCE), Ernakulam, India, 2016, pp. 47-52.
 https://doi.org/10.1109/SAPIENCE.2016.7684166.
